@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+{% block stylecss %}
+.carousel-inner{
+height: 80vh;
+}
+@media (max-width: 850px){
+.carousel-inner{
+height: auto;
+}
+}
+
+
+
+{%endblock stylecss%}
+{% block content %}
+<!--<div class="sliding-photos">-->
+<!--        <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true}'>-->
+<!--          <div class="carousel-cell">-->
+<!--            <img class="w3-image" src="{% static 'img/operation1.jpeg' %}" >-->
+<!--          </div>-->
+<!--          <div class="carousel-cell">-->
+<!--            <img class="w3-image" src="{% static 'img/operation1.jpeg' %}" >-->
+<!--          </div>-->
+<!--          <div class="carousel-cell">-->
+<!--            <img class="w3-image" src="{% static 'img/operation1.jpeg' %}" >-->
+<!--          </div>-->
+<!--          <div class="carousel-cell">-->
+<!--            <img class="w3-image" src="{% static 'img/operation1.jpeg' %}" >-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<section class="services">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/operation1.jpeg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/operation1.jpeg' %}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/operation1.jpeg' %}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="service-title">
+        <h2>Our ENT Facilities</h2>
+        <div class="line-breaker-p" style="width:32%; height: 3px; background: #fd9042;"></div>
+    </div>
+    <div class="container">
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/nose.jpeg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Nasal Allergies & Nose Surgeries</h5>
+                        <p class="card-text">We take up all types of allergy testings and allergy specific treatments. Our team is well versed with performing surgeries for deviated nasal septum, sinus issues, fracture nasal bone & nasal augmentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/endoscope.jpeg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Endoscopic sinus surgeries</h5>
+                        <p class="card-text"> We have an elaborately advanced set up for performing endoscopic sinus surgeries and various other surgeries where advanced scopes are required. Our team is highly trained, exceptionally skilled and routinely does various endoscopic procedures.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/earSurg.jpg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Ear Infections & Surgeries</h5>
+                        <p class="card-text"> We treat all kinds of bacterial, fungal, viral & non specific ear infections. Our patients come with complaints of ear discharge, pain, itching among various other problems. We frequently perform surgeries for perforated ear membrane, middle ear problems and mastoid infections.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/earmachine.jpeg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Hearing problems and Hearing aids.</h5>
+                        <p class="card-text"> We do hearing tests clinically in the opd as well as pure tone audiometry in a proper sound proof room with qualified personnel. We try to find out root cause of hearing problem and treat accordingly. We also provide optimum Hearing aids manufactured by class leading Indian and foreign companies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/throatOp.jpeg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Throat infections and surgeries</h5>
+                        <p class="card-text">We routinely treat a number of patients having tonsillar infections, pharyngeal and laryngeal infections, adenoid issues on OPD basis and perform surgical procedures as required according to the treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/thyroid.jpeg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Thyroid problems</h5>
+                        <p class="card-text">We conduct all thyroid function tests, ultrasonography and other radio imaging tests along with thyroid related clinical examination. We prudently decide the most appropriate treatment, whether its surgical or medical.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/pain.jpeg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Head & Neck Cancers</h5>
+                        <p class="card-text">We work along with oncosurgeons to come out with the best possible approach in diagnosing and managing various Head & Neck cancers including oral cavity carcinomas, laryngeal cancers, thyroid tumours & Nasopharyngeal carcinomas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{% static 'img/earSurg.jpg' %}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Others</h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>Vertigo treatment</li>
+                                <li>Sleep Apnoea & Snoring issues</li>
+                                <li>Speech disorders and issues</li>
+                                <li>Oral ulcer management</li>
+                                <li>Parotid infections & Surgeries</li>
+                                <li>Disorders of other salivary glands</li>
+                                <li>Laser surgeries</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+<!--    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>-->
+{%endblock content%}

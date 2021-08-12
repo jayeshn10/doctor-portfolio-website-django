@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="blog">
+    <div class="blog-title">
+        <h1>Blogs</h1>
+        <div class="line-breaker-p" style="width:32%; height: 3px; background: #fd9042;"></div>
+    </div>
+    <div id="" class="container">
+        {% for blog in blogs%}
+        <div class="card mb-3" style="max-width: 100%;">
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <img src="{{blog.blog_img.url}}" class="card-img-top" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{blog.blog_title}}</h5>
+                        <p class="card-text">{{blog.blog_desc|striptags|truncatechars:140}}</p>
+                        <p class="card-text"><small class="text-muted">Published Date : {{blog.blog_pubdate}} </small></p>
+                        <a href="{%url 'singleblog' blog.blog_slug %}" class="btn " style="background:#20c997;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+        
+    </div>
+</section>
+{%endblock content%}
+<!--
+    <div class="card">
+                <img class="card-img-top" src="{{blog.blog_img.url}}" alt="Card image cap" height="350px" width="250px">
+                <div class="card-body">
+                    <h5 class="card-title">{{blog.blog_title}}</h5>
+                    <p class="card-text">{{blog.blog_desc|striptags|truncatechars:50}}</p>
+                    <a href="{%url 'singleblog' blog.blog_slug %}" class="btn " style="background:#20c997;">Read More</a>
+                </div>
+            </div>
+
+{% for blog in blogs%}
+            <div class="card" style="width: 350px;">
+                <img class="card-img-top" src="{{blog.blog_img.url}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{blog.blog_title}}</h5>
+                    <a href="{%url 'singleblog' blog.blog_slug %}" class="btn " style="background:#b5b5b6;">Read More</a>
+                </div>
+            </div>
+            {%endfor%}
+-->

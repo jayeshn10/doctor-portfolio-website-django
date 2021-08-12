@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Selecao Bootstrap Template - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Favicons -->
+    <link href=" {% static ' {% static 'img/favicon.png' %} ' %} " rel="icon">
+    <link href=" {% static ' {% static 'img/apple-touch-icon.png' %} ' %} " rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href=" {% static ' {% static 'vendor/bootstrap/css/bootstrap.min.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/icofont/icofont.min.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/boxicons/css/boxicons.min.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/animate.css/animate.min.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/remixicon/remixicon.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/line-awesome/css/line-awesome.min.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/venobox/venobox.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'vendor/aos/aos.css' %} ' %} " rel="stylesheet">
+    <link href=" {% static ' {% static 'css/style.css' %} ' %} " rel="stylesheet">
+    <style>
+    .carousel-cell {
+        width: 70%;
+        height: 500px;
+    }
+
+    /* cell number */
+    .carousel-cell:before {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+        <div class="container d-flex align-items-center">
+            <div class="logo mr-auto">
+                <a href=" {% static ' {% url ' {% static 'index' %} ' %} ' %} "><img src=" {% static ' {% static 'img/DrShahLogo.png' %} ' %} " alt="" class="img-fluid"></a>
+                <a href=" {% static ' {% url ' {% static 'index' %} ' %} ' %} "><h1 class="text-dark">Dr.Tanush Shah</h1></a>
+
+                <div id="name">(M.S ENT)</div></a>
+                <!-- Uncomment below if you prefer to use an image logo -->
+            </div>
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href=" {% static ' {% url ' {% static 'index' %} ' %} ' %} ">Home</a></li>
+                    <li class="drop-down"><a href=" {% static ' {% url ' {% static 'facilities' %} ' %} ' %} ">Facilities</a>
+                        <ul>
+                            <li><a href="#">Nasal Alergies/nose surgeries</a></li>
+                            <li><a href="#">Endoscopic sinus surgeries</a></li>
+                            <li><a href="#">Ear Infections & Surgeries</a></li>
+                            <li><a href="#">Hearing problems and Hearing aids.</a></li>
+                            <li><a href="#">Thyroid problems.</a></li>
+                            <li><a href="#">Head & Neck Cancers</a></li>
+                            <li><a href="#">Head & Neck Cancers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=" {% static ' {% static '#portfolio' %} ' %} ">Portfolio</a></li>
+                    <li><a href=" {% static ' {% url ' {% static 'blogs' %} ' %} ' %} ">Blogs</a></li>
+                    <li><a href=" {% static '{% url ' {% static 'about' %} ' %}' %} ">About</a></li>
+                    <li><a href=" {% static '{% url ' {% static 'contact' %} ' %}' %} ">Contact</a></li>
+                </ul>
+            </nav><!-- .nav-menu end-->
+        </div>
+    </header>
+
+    {% block content %} {% endblock content %}
+      <!-- Vendor JS Files -->
+  <script src=" {% static 'vendor/jquery/jquery.min.js' %} "></script>
+  <script src=" {% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+  <script src=" {% static 'vendor/jquery.easing/jquery.easing.min.js' %} "></script>
+  <script src=" {% static 'vendor/php-email-form/validate.js' %} "></script>
+  <script src=" {% static 'vendor/isotope-layout/isotope.pkgd.min.js' %} "></script>
+  <script src=" {% static 'vendor/venobox/venobox.min.js' %} "></script>
+  <script src=" {% static 'vendor/owl.carousel/owl.carousel.min.js' %} "></script>
+  <script src=" {% static 'vendor/aos/aos.js' %} "></script>
+
+  <!-- Template Main JS File -->
+  <script src=" {% static 'js/main.js' %} "></script>
+</body>
+
+</html>

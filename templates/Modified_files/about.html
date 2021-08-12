@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="about">
+    <div id="about-container" class="container">
+        <div class="about-title">
+            <h1>Dr. Shah Tanush</h1>
+        </div>
+        <div class="about-info">
+            <div class="about-img">
+                <img src=" {% static ' {% static 'img/profile.png' %} ' %} ">
+            </div>
+            <div class="about-desc">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam earum necessitatibus, magnam possimus dolores deserunt iure commodi consectetur inventore nisi nulla adipisci numquam enim minima ipsam doloremque autem corporis accusantium ducimus cum quibusdam culpa at non. Dolore veritatis sunt qui fuga corrupti recusandae porro, expedita sed. Ab aut nam dignissimos accusamus nihil minima veritatis temporibus iste eum quisquam quod itaque nobis officiis illo et odio, incidunt doloribus eos quaerat fuga, fugiat neque vero aspernatur. Libero aspernatur autem totam, nihil ullam mollitia, sunt et dolore necessitatibus explicabo asperiores! Ab neque ex odit illum laborum aspernatur ea fugiat sunt est explicabo pariatur ipsum veritatis, doloremque labore reprehenderit magni aliquam nobis. Consequatur perspiciatis esse, obcaecati tempore sunt officiis pariatur accusantium placeat autem? Perspiciatis et sint, nemo, neque inventore laborum rerum incidunt eligendi vitae earum ipsam iste id adipisci totam debitis ex accusantium, at porro nulla praesentium ea? Ducimus est ipsum totam ad incidunt vitae neque perferendis excepturi molestiae dolorem nobis obcaecati veniam, dolor voluptatibus voluptas ullam? Voluptatem error vero itaque magnam sequi voluptatibus nostrum sit modi facere exercitationem tenetur ipsum, vel iusto vitae dolores, nisi, totam cupiditate? Nesciunt similique a accusamus deleniti quo blanditiis voluptatibus? Sapiente voluptate illo, cupiditate inventore libero iusto aperiam, necessitatibus mollitia possimus voluptatum minus repudiandae placeat, tempora id culpa explicabo ab expedita perferendis ipsum earum sequi? Error cum tenetur aperiam aliquam dolorem voluptates alias quidem, nisi sunt enim aspernatur ab eaque veritatis quibusdam odio ea accusantium officia, iste officiis.</p>
+            </div>
+        </div>
+        <div class="line-breaker"></div>
+        <div class="qualifications">
+            <div class="quali-img">
+            </div>
+            <div class="qual-info">
+                <div class="quali-head">
+                    <h3>qualification and training</h3>
+                </div>
+                <div class="quali-desc">
+                    <ul>
+                        <li>MS(ENT) : Mahatma Gandhi Mission Medical College, Kamothe, Navi Mumbai, India Cleared in first attempt, Year of passing: 2019 </li>
+                        <li>MBBS: TERNA Medical College under Maharashtra University of Health Sciences, Nerul, Navi Mumbai, India.<br> 1st, 2nd & 3rd year cleared in first attempt, Year of passing: 2015 </li>
+                        <li>Oxford University Hospital : Visiting International fellow at Department of Ear, Nose and Throat at the John Radcliffe Hospital, Oxford, UK.</li>
+                        <li>Michigan Medicine, University of Michigan Observership at the department of Otolaryngology - Head and Neck Surgery, Ann arbor, Michigan, USA.</li>
+                        <li>Schooling : St. Xavier’s High School, Surat, India.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="achievements">
+            <div class="achieve-title">
+                <h2>Professional achievements by Dr. Shah Tansh</h2>
+            </div>
+            <div class="achievement-gallery">
+                <div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true}'>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/profile.jpg' %}' %} ">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/dr.shahTanush.jpeg' %}' %} ">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/profile.jpg' %}' %} ">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/dr.shahTanush.jpeg' %}' %} ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+{% endblock content %}

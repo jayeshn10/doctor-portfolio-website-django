@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+        <div id="heroCarousel" class="container carousel carousel-fade">
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <div class="holder">
+                        <div>
+                            <img src=" {% static 'img/DrShahLogo.png' %} " alt="" width="225px" height="225px">
+                        </div>
+                        <div>
+                            <h2 class="animate__animated animate__fadeInDown">Dr. Tanush Shah</h2>
+                            <h5>The ENT specialist</h5>
+                            <p class="animate__animated animate__fadeInUp">MBBS, M.S. ENT|Reg.No. MMC 2015/05/2982 <br>Consultant ENT, Head & Neck Surgeon.<br> Visiting International Fellow, Oxford University NHS Hospital, UK <br> Member of Association of Otolaryngologists of INDIA. <br> Member of AOI MUMBAI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <defs>
+                <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+            </defs>
+            <g class="wave1">
+                <use xlink:href=" #wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
+            </g>
+            <g class="wave2">
+                <use xlink:href=" #wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
+            </g>
+            <g class="wave3">
+                <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
+            </g>
+        </svg>
+    </section>
+
+<section id="intro" class="intro">
+    <div class="container">
+        <div class="title-holder">
+            <div class="section-title">
+                <h2>The Skill To Heal The Spirt To Care</h2>
+            </div>
+            <div class="line-breaker-lg"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+                {%if p_img%}
+                <img id = "intro-img" src="{{p_img.image_src.url}}" width="90%" height="95%">
+                {%endif%}
+            </div>
+            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <div class="desc-title">
+                    <h4>Dr. Tanush Shah </h4>
+                    <div class="line-breaker-sm"></div>
+                </div>
+                <p>An ENT Specialist you can trust.<br class="br"><br>
+
+                  Dr. Tanush Shah has gathered expertise to treat all problems related to Ear, Nose and Throat. His patients come to him for a varied range of treatment like ear infections, nasal allergies, hearing problems, sinus issues, throat infections and many other ENT related problems.<br class="br"><br>
+
+                  Dr. Shah is an attentive listener who tries to understand the root cause of all ENT conditions, asks to the point questions and gives the right medications accordingly. He prescribes minimal antibiotics and most of his patients are treated on OPD basis without hospital admission. One can trust and count on him for all problems related to Ear, Nose & Throat.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

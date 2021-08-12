@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section id = "clinic" class="clinic">
+        <div class="container">
+            <div class="clinic-title">
+                <h2>YOU CAN CONSULT ME</h2>
+                <h4>For Emergency we are open 24hrs</h4>
+                <h6>Book Appointment</h6>
+                <div class="appoint">
+
+                  <a id="appoint" href=" {% static ' tel:+919619689770 ' %} "><i class="icofont-ui-call call"></i></a>
+                  <a id="appoint" href='https://wa.me/+919619689770' target='_blank'><i class="icofont-whatsapp wp"></i></a>
+                  <a id="appoint" href=" {% static 'sms:+919619689770' %} "><i class="icofont-ui-text-loading sms"></i></a>
+                </div>
+            </div>
+            <div class="line-breaker-md"></div>
+            <div id="clinic-location">
+                <div class="loc-section">
+                    <div class="loc">
+                        <div id="clinic-map">
+                            <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1886.098665395466!2d73.01491124532758!3d19.01102437186724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3c06317011f%3A0x16a2e8a94ed3b47f!2sDr%20Tanush%20Shah%20(%20MBBS%20%2C%20MS%20ENT%20)!5e0!3m2!1sen!2sin!4v1609179645274!5m2!1sen!2sin" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                          </div>
+
+                          <div class="clinic-add">
+                            <div class="info">
+                              <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <div>
+                                    <p>Seawoods hospital Mahavir Vihar, near Navratna hotel, Ashtagandha Society, Om Ganesh Society, Sector-48, Seawoods, Navi Mumbai, Maharashtra 400706
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="time">
+                                <i class="icofont-clock-time"></i>
+                                <div>
+                                    <p>Monday - Saturday <br>6:00 PM - 8:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="for-call">
+                                <i class="icofont-ui-call"></i>
+                                <a href=" {% static ' {% static 'tel:+9196198970' %} ' %} "><p>+91 9619689770</p></a>
+
+                            </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="loc">
+                        <div id="clinic-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15087.217000541863!2d73.0966576!3d19.0283455!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8848aad28cae4df!2sDr.%20Singh&#39;s%20City%20Hospital%20%26%20Medical%20Research%20Centre!5e0!3m2!1sen!2sin!4v1609243499373!5m2!1sen!2sin" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                          </div>
+
+                          <div class="clinic-add">
+                            <div class="info">
+                              <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <div>
+                                    <p> Plot No. - 32, Sector - 4, Kalamboli., Navi Mumbai, Maharashtra 410218
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="for-call">
+                                <i class="icofont-ui-call"></i>
+                                <a href=" {% static ' {% static 'tel:+9196198970' %} ' %} "><p>+91 9619689770</p></a>
+
+                            </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="loc-section">
+                    <div class="loc">
+                        <div id="clinic-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15086.119315376322!2d73.0247857!3d19.0404289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0630db5ea0b5ed!2sDY%20Patil%20Healthcare!5e0!3m2!1sen!2sin!4v1609244418540!5m2!1sen!2sin" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                          </div>
+
+                          <div class="clinic-add">
+                            <div class="info">
+                              <div class="address">
+                                <i class="icofont-google-map"></i>
+                                <div>
+                                    <p>D-wing, Dr D Y Patil Vidyanagar, Sector 5, Nerul, Navi Mumbai, Maharashtra 400706
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="for-call">
+                                <i class="icofont-ui-call"></i>
+                                <a href=" {% static ' {% static 'tel:+9196198970' %} ' %} "><p>+91 9619689770</p></a>
+                            </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{%endblock content%}

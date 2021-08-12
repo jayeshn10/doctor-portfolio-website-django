@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section class="blog">
+    <div class="blog-title">
+            <h1>This is full blog section title</h1>
+        </div>
+    <div id="blog-container" class="container">
+        <div class="row">
+    <div class="col-8">
+<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true}'>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/profile.jpg' %}' %} ">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/dr.shahTanush.jpeg' %}' %} ">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/profile.jpg' %}' %} ">
+                    </div>
+                    <div class="carousel-cell">
+                        <img class="w3-image" src=" {% static '{% static 'img/dr.shahTanush.jpeg' %}' %} ">
+                    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+                </div>
+
+    </div>
+    <div class="col-4">
+      Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+        Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content
+    </div>
+            <div class="row">
+            <div class="col" style="margin-top:35px"><a href="#"> add link here</a></div>
+            </div>
+                <div class="row">
+            <div class="col" style="margin-top:20px">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+        Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content
+            </div>
+            </div>
+
+    </div>
+</section>
+
+{%endblock content%}

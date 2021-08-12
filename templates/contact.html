@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+{% load static %}
+{%block stylecss%}
+.row1{
+text-align:center;
+margin:0 auto;
+}
+.row1 {
+display:inline-block;
+<!--   vertical-align: middle;-->
+float: none;
+}
+.card{
+display:inline-block;
+margin: 10px;
+height: 615px;
+}
+@media (max-width: 510px){
+.card{
+height: fit-content;
+}
+#clinic iframe{
+width: 100%;
+}
+.card-body p{
+font-size: 15px;
+}
+.card-body i{
+font-size: 15px;
+width: 35px;
+height: 35px;
+}
+.address div, .time div{
+width: fit-content;
+}
+}
+input[type=text], select, textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: vertical;
+}
+label {
+padding: 12px 12px 12px 0;
+display: inline-block;
+}
+input[type=submit] {
+background-color: #65BDC8;
+color: Black;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float: right;
+}
+input[type=submit]:hover {
+background-color: #55CDDDE6;
+}
+.container2 {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+margin-right: 5%;
+margin-left: 5%;
+}
+.col-25 {
+float: left;
+width: 25%;
+margin-top: 6px;
+}
+.col-75 {
+float: left;
+width: 75%;
+margin-top: 6px;
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.col-25, .col-75, input[type=submit] {
+width: 100%;
+margin-top: 0;
+}
+}
+{%endblock stylecss%}
+{% block content %}
+<section id="clinic" class="clinic">
+    <div class="container">
+        <div class="clinic-title">
+            <h2>YOU CAN CONSULT ME</h2>
+            <h4>For Emergency we are open 24hrs</h4>
+            <img src="{% static 'img/book-appinment1.png' %}" height="80px" width="50px">
+            <!--                <h6>Book Appointment</h6> -->
+            <div class="appoint">
+                <a class="appoint" href=" tel:{{p_info.personal_contactno|cut:' '}}"><i class="icofont-ui-call call"></i></a>
+                <a class="appoint" href='https://wa.me/{{p_info.personal_contactno|cut:" "}}' target='_blank'><i class="icofont-whatsapp wp"></i></a>
+                <a class="appoint" href="sms:{{p_info.personal_contactno|cut:' '}}"><i class="icofont-ui-text-loading sms"></i></a>
+            </div>
+        </div>
+        <div class="line-breaker-md"></div>
+        <div id="clinic-location">
+            <div class="row1">
+                {%for emt_map in emt_maps%}
+                <div class="card" style="margin:10px;">
+                    <div id="clinic-map">
+                        {{emt_map.address_url|safe}}
+                    </div>
+                    <div class="card-body">
+                        <div class="clinic-add">
+                            <div class="info">
+                                <div class="address">
+                                    <i class="icofont-google-map"></i>
+                                    <div>
+                                        <p>{{emt_map.address}}
+                                        </p>
+                                    </div>
+                                </div>
+                                {%if emt_map.avl_time %}
+                                <div class="time">
+                                    <i class="icofont-clock-time"></i>
+                                    <div>
+                                        <p>{{emt_map.avl_time}}</p>
+                                    </div>
+                                </div>
+                                {%endif%}
+                                <div class="for-call">
+                                    <i class="icofont-ui-call"></i>
+                                    <a href="tel:{{emt_map.contact_no|cut:' '}}">
+                                        <p>{{emt_map.contact_no}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container2">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <div>
+            <h2 style="text-align:center;">Contact Us</h2>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-25">
+                    <label for="fullname">Full Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="fullname" name="fullname" placeholder="Your name.." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="phoneno">Phone No</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="phoneno" name="phoneno" placeholder="Your phone no.." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="email" name="email" placeholder="Your Email.." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="message">Message</label>
+                </div>
+                <div class="col-75">
+                    <textarea id="message" name="message" placeholder="Write something.." size="" required style="height:200px"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    {%endif%}
+</section>
+{%endblock content%}
